@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOs</title>
+    <link rel="stylesheet" href="../../MDBootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../MDBootstrap/css/mdb.css">
+    <link rel="stylesheet" href="../../../font-awoesome/fa/css/all.css">
+    <style>
+        #header{
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .fa-xmark {
+            font-size: 22px;
+        }
+        .fa-xmark{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row" id="header">
+            <div class="card col-md-6 m-auto p-0">
+                <div class="card-header bg-primary text-center text-white">
+                    <span>TODO APP</span>
+                </div>
+                <div class="card-body bg-light">
+                    <p class="text-center text-danger" id="alertError"></p>
+                    <form id="form">
+                        <div class="form-group">
+                            <input type="text" value="" id="taskInput" placeholder="Enter A Task" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Add" class="btn btn-primary" id="addItemBtn">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-6 m-auto">
+                <ul class="list-group pb-3" id="todoItems"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
